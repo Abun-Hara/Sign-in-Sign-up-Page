@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>here is  image sliding with set Time interval.</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        body{
+            width: 100vw;
+            height: 90vh;
+        }
+        .wholeContainer{
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .imageContainer{
+            width: 80vw;
+            height: 50vh;
+            overflow: hidden;
+        }
+        #imageContent{
+            width: 100%;
+            height: auto;
+           overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="wholeContainer">
+        <div class="imageContainer">
+            <img src="" alt="" id="imageContent">
+        </div>
+    </div>
+    <script>
+         const images = [
+            "images/image2.jpg",
+            "images/image3.jpg",
+            "images/image4.jpg",
+            "images/image5.jpg",
+            "images/image6.jpg",
+            "images/image7.jpg",
+            "images/image8.jpg"
+        ];
+
+        let currentIndex = 0;
+        const imageContent = document.getElementById('imageContent');
+        const updateImage = () => {
+            imageContent.src = images[currentIndex];
+            currentIndex = (currentIndex + 1) % images.length; 
+        };
+        updateImage();
+        setInterval(updateImage, 3000);
+    </script>
+</body>
+</html>

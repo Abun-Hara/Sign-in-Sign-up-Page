@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepseek Chat Bot</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="stylesheet" href="CSS/chatBot.css">
+</head>
+<body>
+    <div class="chatArea">
+        <div class="chatbot">
+            <div class="container">
+                <header>
+                    <h2>Deepseek Chat!</h2>
+                    <marquee behavior="" direction="left" style="color: #1eff00; font-weight: bold; font-size: 3vh;">By Abunu</marquee>
+                </header>
+                <div class="signUpArea">
+                    <form id="signUpForm">
+                        <label for="userName">User Name</label> 
+                        <input type="text" id="userName" placeholder="Enter your name..." required  autocomplete="on">  
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email..." required autocomplete="on">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" placeholder="Enter your phone number..." required  autocomplete="on">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password..." required  autocomplete="on">
+                        <button type="submit" id="signUpBtn" disabled>Sign Up</button>
+                    </form>
+                </div>
+                <div id="darkTheme"><span class="material-symbols-outlined">contrast</span></div>
+            </div>
+            <ul class="chatBox" style="display: none;">
+                <li class="chat incoming">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                    <p id="startChat">Start Chatting...</p>
+                </li>
+            </ul>
+            <div class="chatinput" style="display: none;">
+                <textarea id="chatMessage" placeholder="Enter your text..."></textarea>
+                <span class="material-symbols-outlined" id="sendBtn">send</span>
+            </div>
+        </div>
+    </div>
+    <script src="JavaScript/chatBox.js"></script>
+</body>
+</html>

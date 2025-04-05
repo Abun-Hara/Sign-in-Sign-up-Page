@@ -1,0 +1,213 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+/* Chatbot container */
+.chatbot {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    width: 95vw;
+    max-width: 1000px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+header {
+    height: 7vh;
+    background-color: #3f51b5;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold;
+    border-bottom: 3px solid #303f9f;
+}
+
+.container {
+    position: relative;
+}
+
+#darkTheme {
+    position: absolute;
+    right: 7%;
+    font-size: 2em;
+    top: 30%;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
+}
+
+/* signUp Area Styling */
+.signUpArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 80%;
+    height: 70vh;
+    margin: 3vw;
+    border: 3px solid;
+    padding: 3vw;
+}
+
+label {
+    font-size: 2vw;
+    color: #3f51b5;
+    font-weight: bold;
+}
+
+form input {
+    padding: 1vh;
+    border-radius: 10px;
+    border: 2px solid #3f51b5;
+    font-size: 2vw;
+    color: #3f51b5;
+}
+
+button[type="submit"] {
+    margin-left: 20%;
+    width: 25vw;
+    background-color: #1b5c5c;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 2vw;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #666;
+}
+
+/* ChatBox styling */
+.chatBox {
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    min-height: 70vh;
+    margin-bottom: 70px;
+}
+
+/* Message styling */
+.chat {
+    display: flex;
+    align-items: flex-start;
+}
+
+.chat.incoming {
+    justify-content: flex-start;
+}
+
+.chat.outgoing {
+    justify-content: flex-end;
+}
+
+.chat p {
+    background-color: #3280da;
+    padding: 12px;
+    border-radius: 12px;
+    max-width: 70%;
+    word-wrap: break-word;
+    font-size: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    white-space: pre-line;
+}
+
+.chat.outgoing p {
+    background-color: #3f72b5;
+    color: white;
+}
+
+/* Ensure last message is fully visible */
+.chatBox li:last-child {
+    margin-bottom: 20px;
+}
+
+/* Input area styling */
+.chatinput {
+    display: none;
+    align-items: center;
+    padding: 15px;
+    background-color: #111111;
+    border-top: 2px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 970px;
+    z-index: 10;
+}
+
+.chatinput textarea {
+    flex: 1;
+    resize: none;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #242323;
+    outline: none;
+    height: 5vh;
+    font-size: 1.4em;
+    color: #dde;
+}
+
+.chatinput textarea::placeholder {
+    color: #eee;
+}
+
+.chatinput textarea:focus {
+    border-color: #3f51b5;
+    box-shadow: 0 0 5px rgba(63, 81, 181, 0.5);
+}
+
+.chatinput span {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #3f51b5;
+    font-size: 30px;
+    transition: color 0.3s;
+}
+
+.chatinput span:hover {
+    color: #303f9f;
+}
+
+/* Dark Mode */
+.dark {
+    background-color: #111;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
